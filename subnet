@@ -1,0 +1,45 @@
+Introduction To Subnetting
+Last Updated : 10 Feb, 2026
+
+Subnetting is the process of dividing a large IP network into smaller logical networks called subnets. Each subnet allows devices to communicate efficiently, improving network performance, security, and manageability.
+
+    Each department is assigned a separate subnet
+    Devices within a department communicate using their own subnet
+    Inter-department traffic is routed through a router
+    Broadcast traffic is limited to each subnet
+    Network performance, security, and management are improved
+
+This approach keeps departmental traffic separate, organized, and efficient, which is exactly what subnetting is designed to achieve.
+Need of Subnetting
+
+Subnetting enables a single IP network to be divided into smaller, logical networks, allowing for efficient IP address usage, improved performance, and enhanced security control.
+
+Let's consider a company that follows classful addressing. It has a Class C network (192.168.1.0/24) with 256 IP addresses. It has three departments:
+192_168_1_0_24
+Subnetting
+
+Without subnetting:
+
+    All departments share the same network
+    Only 80 IP addresses are used, leaving 176 unused
+    Broadcast traffic floods the entire network
+    Devices from different departments can access each other freely
+
+With subnetting:
+
+    The network is divided into three smaller subnets
+    Each department receives only the IPs it needs
+    Traffic remains within each subnet, improving performance
+    Departments are logically isolated, improving security
+    IP addresses are used efficiently, with room for future growth
+
+Department	Devices	IPs Allocated (after subnetting)
+Sales	20	32 (192.168.1.0/27)
+HR	10	16 (192.168.1.32/28)
+IT	50	64 (192.168.1.48/26)
+
+By subnetting, we:
+
+    Use IP addresses efficiently, allocating only what each department requires
+    Improve network performance by containing traffic within each subnet
+    Enhance security by isolating departments from one another
